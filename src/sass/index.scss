@@ -1,0 +1,231 @@
+@import "common.scss";
+html {
+    body {
+        min-width: 320px;
+        max-width: 750px;
+        margin: 0 auto;
+        .header {
+            @include displayStyle(flex, space-around, center);
+            @include widthStyle($height: 2.6133rem);
+            border-bottom: 1px solid var(--cl-fontColor);
+            background-color: rgb(255, 255, 255);
+            z-index: 100;
+            .navLogo {
+                @include widthStyle(5.0667rem, 1.6rem);
+                img {
+                    @include widthStyle(5.0667rem);
+                }
+            }
+            .navButton {
+                @include positionStyle(relative);
+                @include displayStyle(flex, space-around, center);
+                @include borderRadius(0.2133rem);
+                @include widthStyle(5.0133rem, 1.3333rem);
+                @include fontStyle(0.64rem, var(--cl-white));
+                background-color: var(--cl-fontColor);
+                &::before {
+                    @include positionStyle(absolute, 0.1333rem, 2.5067rem);
+                    @include pseudoClass(2.4rem, 80%);
+                    @include borderRadius(0.2133rem);
+                    background-color: var(--cl-white);
+                    z-index: 1;
+                }
+                .navInvitationCard {
+                    a {
+                        @include fontStyle($color: var(--cl-white));
+                        &:hover {
+                            @include fontStyle($color: var(--cl-white));
+                        }
+                    }
+                }
+                .navFontStyle {
+                    @include fontStyle($color: var(--cl-fontColor), $fontWeight: 600);
+                    z-index: 2;
+                }
+            }
+            .navContact {
+                @include widthStyle(4.5867rem);
+                @include displayStyle(flex, space-around);
+                i {
+                    @include widthStyle(0.9333rem, 0.9333rem);
+                    font-size: 0.9333rem;
+                    @include fontStyle($color: var(--cl-fontColor));
+                }
+            }
+        }
+        .topNav {
+            // @include spacingStyle(1.28rem 0 0 0);
+            @include widthStyle($height: 2.1333rem);
+            @include displayStyle(flex);
+            @include fontStyle(0.64rem, var(--cl-fontColor));
+            .topNavLink {
+                @include positionStyle(relative);
+                @include displayStyle(flex, center, center);
+                @include widthStyle(25%, 100%);
+                @include fontStyle($color: var(--cl-fontColor));
+                &:last-child {
+                    i {
+                        @include fontStyle(0.64rem);
+                        @include spacingStyle(0 0.3733rem 0 0);
+                    }
+                }
+            }
+            .topNavBorder {
+                @include fontStyle($fontWeight: 600);
+                &::after {
+                    @include positionStyle(absolute, 50%, 50%);
+                    @include pseudoClass(1.28rem, 0.6667rem);
+                    border-bottom: 0.0267rem solid var(--cl-fontColor);
+                    transform: translate(-50%, -20%);
+                }
+            }
+        }
+        .bannerContainer {
+            @include widthStyle(100%, 11.52rem);
+            img {
+                @include widthStyle(100%, 100%);
+            }
+        }
+        .cardInformationBox {
+            @include widthStyle(100%, 12.7467rem);
+            @include borderRadius(0, 0, 0.5333rem, 0.5333rem);
+            @include spacingStyle($padding: 0.64rem 0.4rem 0);
+            background-color: var(--cl-bgColor);
+            .cardContainer {
+                @include displayStyle(flex);
+                flex-direction: column;
+                @include widthStyle(19.2rem, 11.2533rem);
+                @include borderRadius(0.3733rem);
+                @include fontStyle(0.5333rem, var(--cl-fontColor));
+                background-color: var(--cl-white);
+                .cardTitleMore {
+                    @include displayStyle(flex, space-between, center);
+                    @include spacingStyle($padding: 0 0.3733rem);
+                    @include widthStyle(100%, 1.3867rem);
+                    border-bottom: 1px solid var(--cl-gray);
+                    .cardTitleBox {
+                        @include displayStyle(flex, space-around, center);
+                        i {
+                            @include fontStyle(0.66667rem);
+                            @include spacingStyle($padding: 0 0.32rem 0 0);
+                        }
+                        div {
+                            @include fontStyle(0.4267rem);
+                        }
+                    }
+                }
+                .rotationChart {
+                    flex: 1;
+                    @include displayStyle(flex);
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    .rotationBox {
+                        @include displayStyle(flex);
+                        .rotationImg {
+                            @include widthStyle(4.9067rem, 7.7333rem);
+                            @include borderStyle(1px, solid, var(--cl-gray-100));
+                            &:nth-of-type(2) {
+                                @include spacingStyle(0 0.7733rem);
+                            }
+                        }
+                        $list: (
+                            1: hb_img52,
+                            2: hb_img51,
+                            3: hb_img53,
+                        );
+                        @each $key, $var in $list {
+                            .rotationImg:nth-child(#{$key}) {
+                                @include imgStyle("../images/upload/#{$var}.jpg", no-repeat, 100%, 100%);
+                            }
+                        }
+                    }
+                    .rotationList {
+                        margin-top: 0.5333rem;
+                        span {
+                            @include displayStyle(inline-block);
+                            @include spacingStyle(0 0.4rem);
+                            @include widthStyle(0.32rem, 0.32rem);
+                            @include borderStyle(1px, solid, var(--cl-fontColor));
+                            @include borderRadius(50%);
+                        }
+                        .solidSircle {
+                            background-color: var(--cl-fontColor);
+                        }
+                    }
+                }
+            }
+        }
+        .noticeBox {
+            @include displayStyle(flex);
+            @include spacingStyle($padding: 0 0.7467rem);
+            @include widthStyle($height: 1.7067rem);
+            line-height: 1.7067rem;
+            @include fontStyle(0.4267rem, var(--cl-fontColor));
+            i {
+                @include fontStyle(0.6933rem);
+                @include spacingStyle($padding: 0 0.48rem 0 0);
+            }
+            span {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+        .marryCardContainer {
+            @include widthStyle($height: 12.1067rem);
+            @include borderRadius(0.5333rem, 0.5333rem, 0, 0);
+            @include spacingStyle($padding: 0.44rem 0.4rem);
+            background-color: var(--cl-bgColor);
+            .marryCardBox {
+                @include displayStyle(flex, space-around, center);
+                @include positionStyle(relative);
+                @include widthStyle(19.2rem, 11.2533rem);
+                background-color: var(--cl-white);
+                @include borderRadius(0.5333rem);
+                &::after {
+                    @include positionStyle(absolute, 0, 0);
+                    @include pseudoClass(100%, 100%);
+                    @include borderRadius(inherit);
+                    @include imgStyle("../images/flower.png", no-repeat, cover);
+                }
+                .marryLeftImg {
+                    @include widthStyle(5.6rem, 10.3467rem);
+                    @include imgStyle("../images/marryImg.png", no-repeat, cover);
+                    @include spacingStyle(0 0 0 0.2rem);
+                    z-index: 10;
+                }
+                .marryRightContent {
+                    @include widthStyle(10.6667rem);
+                    z-index: 10;
+                    .marryLogo {
+                        @include widthStyle(100%, 6.3467rem);
+                        @include imgStyle("../images/marryLogo.png", no-repeat, cover);
+                        @include spacingStyle(0 0 0.3733rem);
+                    }
+                    .marryFont {
+                        @include fontStyle(0.48rem, var(--cl-fontColor));
+                        @include widthStyle(100%, 2.88rem);
+                        div {
+                            text-indent: 2em;
+                            letter-spacing: 0.0133rem;
+                            line-height: 1.5em;
+                            display: -webkit-box; /* 弹性伸缩盒子模型显示 */
+                            overflow: hidden; /* 溢出的部分影藏 */
+                            text-overflow: ellipsis; /* 文字用省略号代替超出的部分 */
+                            -webkit-box-orient: vertical; /* 设置或检索伸缩盒子对象的子元素排列方式 */
+                            -webkit-line-clamp: 4;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* media start */
+@media screen and (min-width: 750px) {
+    html {
+        font-size: 37.5px !important;
+    }
+}
+/* media end*/

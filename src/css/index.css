@@ -1,0 +1,316 @@
+@charset "UTF-8";
+/* sass mixin variable fun start */
+/* sass mixin variable fun ebd*/
+/* init css start*/
+:root {
+  --cl-fontColor: #ff8989;
+  --cl-bgColor: #fdf4f4;
+  --cl-white: white;
+  --cl-black: black;
+  --cl-gray: #f2efef;
+  --cl-gray-100: #e9e6e6;
+  --cl-gray-200: #afafaf;
+  --cl-gray-300: rgb(214, 214, 214);
+}
+
+html {
+  font-family: Arial, Microsoft YaHei, Heiti SC, tahoma, hiragino Sans GB, "宋体";
+  overflow-x: hidden;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+  -webkit-touch-callout: none;
+}
+
+a:hover {
+  color: #c81623;
+  /* 鼠标经过链接变颜色 */
+}
+
+/* init css end*/
+html body {
+  min-width: 320px;
+  max-width: 750px;
+  margin: 0 auto;
+}
+html body .header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 2.6133rem;
+  border-bottom: 1px solid var(--cl-fontColor);
+  background-color: rgb(255, 255, 255);
+  z-index: 100;
+}
+html body .header .navLogo {
+  width: 5.0667rem;
+  height: 1.6rem;
+}
+html body .header .navLogo img {
+  width: 5.0667rem;
+}
+html body .header .navButton {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 0.2133rem;
+  width: 5.0133rem;
+  height: 1.3333rem;
+  font-size: 0.64rem;
+  color: var(--cl-white);
+  background-color: var(--cl-fontColor);
+}
+html body .header .navButton::before {
+  position: absolute;
+  top: 0.1333rem;
+  left: 2.5067rem;
+  content: "";
+  display: block;
+  width: 2.4rem;
+  height: 80%;
+  border-radius: 0.2133rem;
+  background-color: var(--cl-white);
+  z-index: 1;
+}
+html body .header .navButton .navInvitationCard a {
+  color: var(--cl-white);
+}
+html body .header .navButton .navInvitationCard a:hover {
+  color: var(--cl-white);
+}
+html body .header .navButton .navFontStyle {
+  color: var(--cl-fontColor);
+  font-weight: 600;
+  z-index: 2;
+}
+html body .header .navContact {
+  width: 4.5867rem;
+  display: flex;
+  justify-content: space-around;
+}
+html body .header .navContact i {
+  width: 0.9333rem;
+  height: 0.9333rem;
+  font-size: 0.9333rem;
+  color: var(--cl-fontColor);
+}
+html body .topNav {
+  height: 2.1333rem;
+  display: flex;
+  font-size: 0.64rem;
+  color: var(--cl-fontColor);
+}
+html body .topNav .topNavLink {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 100%;
+  color: var(--cl-fontColor);
+}
+html body .topNav .topNavLink:last-child i {
+  font-size: 0.64rem;
+  margin: 0 0.3733rem 0 0;
+}
+html body .topNav .topNavBorder {
+  font-weight: 600;
+}
+html body .topNav .topNavBorder::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: "";
+  display: block;
+  width: 1.28rem;
+  height: 0.6667rem;
+  border-bottom: 0.0267rem solid var(--cl-fontColor);
+  transform: translate(-50%, -20%);
+}
+html body .bannerContainer {
+  width: 100%;
+  height: 11.52rem;
+}
+html body .bannerContainer img {
+  width: 100%;
+  height: 100%;
+}
+html body .cardInformationBox {
+  width: 100%;
+  height: 12.7467rem;
+  border-radius: 0 0 0.5333rem 0.5333rem;
+  padding: 0.64rem 0.4rem 0;
+  background-color: var(--cl-bgColor);
+}
+html body .cardInformationBox .cardContainer {
+  display: flex;
+  flex-direction: column;
+  width: 19.2rem;
+  height: 11.2533rem;
+  border-radius: 0.3733rem;
+  font-size: 0.5333rem;
+  color: var(--cl-fontColor);
+  background-color: var(--cl-white);
+}
+html body .cardInformationBox .cardContainer .cardTitleMore {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.3733rem;
+  width: 100%;
+  height: 1.3867rem;
+  border-bottom: 1px solid var(--cl-gray);
+}
+html body .cardInformationBox .cardContainer .cardTitleMore .cardTitleBox {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+html body .cardInformationBox .cardContainer .cardTitleMore .cardTitleBox i {
+  font-size: 0.66667rem;
+  padding: 0 0.32rem 0 0;
+}
+html body .cardInformationBox .cardContainer .cardTitleMore .cardTitleBox div {
+  font-size: 0.4267rem;
+}
+html body .cardInformationBox .cardContainer .rotationChart {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+html body .cardInformationBox .cardContainer .rotationChart .rotationBox {
+  display: flex;
+}
+html body .cardInformationBox .cardContainer .rotationChart .rotationBox .rotationImg {
+  width: 4.9067rem;
+  height: 7.7333rem;
+  border: 1px solid var(--cl-gray-100);
+}
+html body .cardInformationBox .cardContainer .rotationChart .rotationBox .rotationImg:nth-of-type(2) {
+  margin: 0 0.7733rem;
+}
+html body .cardInformationBox .cardContainer .rotationChart .rotationBox .rotationImg:nth-child(1) {
+  background: url("../images/upload/hb_img52.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+html body .cardInformationBox .cardContainer .rotationChart .rotationBox .rotationImg:nth-child(2) {
+  background: url("../images/upload/hb_img51.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+html body .cardInformationBox .cardContainer .rotationChart .rotationBox .rotationImg:nth-child(3) {
+  background: url("../images/upload/hb_img53.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+html body .cardInformationBox .cardContainer .rotationChart .rotationList {
+  margin-top: 0.5333rem;
+}
+html body .cardInformationBox .cardContainer .rotationChart .rotationList span {
+  display: inline-block;
+  margin: 0 0.4rem;
+  width: 0.32rem;
+  height: 0.32rem;
+  border: 1px solid var(--cl-fontColor);
+  border-radius: 50%;
+}
+html body .cardInformationBox .cardContainer .rotationChart .rotationList .solidSircle {
+  background-color: var(--cl-fontColor);
+}
+html body .noticeBox {
+  display: flex;
+  padding: 0 0.7467rem;
+  height: 1.7067rem;
+  line-height: 1.7067rem;
+  font-size: 0.4267rem;
+  color: var(--cl-fontColor);
+}
+html body .noticeBox i {
+  font-size: 0.6933rem;
+  padding: 0 0.48rem 0 0;
+}
+html body .noticeBox span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+html body .marryCardContainer {
+  height: 12.1067rem;
+  border-radius: 0.5333rem 0.5333rem 0 0;
+  padding: 0.44rem 0.4rem;
+  background-color: var(--cl-bgColor);
+}
+html body .marryCardContainer .marryCardBox {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  width: 19.2rem;
+  height: 11.2533rem;
+  background-color: var(--cl-white);
+  border-radius: 0.5333rem;
+}
+html body .marryCardContainer .marryCardBox::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: url("../images/flower.png") no-repeat;
+  background-size: cover;
+}
+html body .marryCardContainer .marryCardBox .marryLeftImg {
+  width: 5.6rem;
+  height: 10.3467rem;
+  background: url("../images/marryImg.png") no-repeat;
+  background-size: cover;
+  margin: 0 0 0 0.2rem;
+  z-index: 10;
+}
+html body .marryCardContainer .marryCardBox .marryRightContent {
+  width: 10.6667rem;
+  z-index: 10;
+}
+html body .marryCardContainer .marryCardBox .marryRightContent .marryLogo {
+  width: 100%;
+  height: 6.3467rem;
+  background: url("../images/marryLogo.png") no-repeat;
+  background-size: cover;
+  margin: 0 0 0.3733rem;
+}
+html body .marryCardContainer .marryCardBox .marryRightContent .marryFont {
+  font-size: 0.48rem;
+  color: var(--cl-fontColor);
+  width: 100%;
+  height: 2.88rem;
+}
+html body .marryCardContainer .marryCardBox .marryRightContent .marryFont div {
+  text-indent: 2em;
+  letter-spacing: 0.0133rem;
+  line-height: 1.5em;
+  display: -webkit-box;
+  /* 弹性伸缩盒子模型显示 */
+  overflow: hidden;
+  /* 溢出的部分影藏 */
+  text-overflow: ellipsis;
+  /* 文字用省略号代替超出的部分 */
+  -webkit-box-orient: vertical;
+  /* 设置或检索伸缩盒子对象的子元素排列方式 */
+  -webkit-line-clamp: 4;
+}
+
+/* media start */
+@media screen and (min-width: 750px) {
+  html {
+    font-size: 37.5px !important;
+  }
+}
+/* media end*/
+
+/*# sourceMappingURL=index.css.map */

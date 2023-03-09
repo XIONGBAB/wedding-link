@@ -1,0 +1,205 @@
+@import "common.scss";
+html {
+    body {
+        min-width: 320px;
+        max-width: 750px;
+        margin: 0 auto;
+        .header {
+            @include positionStyle(fixed, 0, 50%);
+            @include displayStyle(flex, space-around, center);
+            transform: translateX(-50%);
+            @include widthStyle(20rem, 2.56rem);
+            @include fontStyle($fontSize: 0.64rem, $color: var(--cl-fontColor));
+            border-bottom: 1px solid var(--cl-fontColor);
+            background-color: rgb(255, 255, 255);
+            z-index: 100;
+            .headerBack {
+                i {
+                    @include fontStyle(0.8533rem);
+                }
+            }
+            .headerSearch {
+                @include positionStyle(relative);
+                input {
+                    @include widthStyle(13.6rem, 1.3333rem);
+                    @include borderStyle(1px, solid, var(--cl-fontColor));
+                    @include borderRadius(0.8rem);
+                    @include spacingStyle($padding: 0 0 0 1.92rem);
+                    @include fontStyle($color: var(--cl-gray-200));
+                    outline: none;
+                    &::placeholder {
+                        @include fontStyle($color: var(--cl-gray-300));
+                    }
+                }
+                i {
+                    @include fontStyle(0.6933rem);
+                    @include positionStyle(absolute, 50%, 0.8533rem);
+                    transform: translateY(-45%);
+                }
+            }
+            .headerScreening {
+                i {
+                    @include fontStyle(0.64rem);
+                }
+            }
+            .listFilter {
+                visibility: hidden;
+                @include positionStyle(absolute, 2.56rem);
+                right: 0;
+                @include displayStyle(flex, $alignItems: center);
+                flex-direction: column;
+                @include widthStyle(17.7067rem, 40.7467rem);
+                @include borderStyle(1px, solid, var(--cl-fontColor));
+                @include borderRadius(0.5333rem, 0, 0, 0.5333rem);
+                background-color: var(--cl-white);
+                .listFilterTop {
+                    @include displayStyle(flex, center, center);
+                    @include widthStyle(15.8933rem, 2.1333rem);
+                    border-bottom: 1px solid var(--cl-fontColor);
+                    i {
+                        flex: 1.12rem;
+                        @include fontStyle(1.12rem);
+                    }
+                    span {
+                        flex: 1;
+                        @include fontStyle(0.7467rem);
+                        transform: translateX(-1.12rem);
+                    }
+                }
+                .listFilterButton {
+                    @include spacingStyle(1.0667rem 0 0 0);
+                    @include widthStyle(100%);
+                    .listButtonType {
+                        @include fontStyle(0.5867rem);
+                        @include spacingStyle(0 0 0.8rem);
+                        .typeButton {
+                            @include widthStyle(3.7333rem, 1.12rem);
+                            @include borderStyle(1px, solid, var(--cl-fontColor));
+                            @include borderRadius(0, 0.2667rem, 0.2667rem, 0);
+                            @include fontStyle(0.7467rem);
+                            @include spacingStyle(0 0 0.5333rem);
+                            border-left: 1px solid transparent;
+                            text-align: center;
+                            line-height: 1.5em;
+                        }
+                        .typeAllButton {
+                            @include displayStyle(flex);
+                            @include spacingStyle(0 0 0 1.12rem);
+                            flex-wrap: wrap;
+                            button {
+                                @include widthStyle(3.2rem, 1.4667rem);
+                                @include fontStyle($color: var(--cl-fontColor));
+                                @include borderRadius(0.2667rem);
+                                @include borderStyle(1px, solid, var(--cl-fontColor));
+                                @include spacingStyle(0 0.8rem 0.7rem 0);
+                                background-color: var(--cl-white);
+                            }
+                            .typeAllStyle {
+                                background-color: var(--cl-fontColor);
+                                color: var(--cl-white);
+                            }
+                        }
+                    }
+                    .listButtonStyle {
+                        @extend .listButtonType;
+                    }
+                    .listButtonAmount {
+                        @extend .listButtonType;
+                    }
+                }
+                .listFilterFooter {
+                    @include displayStyle(flex, $alignItems: center);
+                    flex-direction: column;
+                    .footerLogo {
+                        @include widthStyle(6.0267rem, 3.5733rem);
+                        @include imgStyle("../images/marryLogo.png", no-repeat, 100%);
+                        @include spacingStyle(0 0 1rem);
+                    }
+                    .footerButton {
+                        @include displayStyle(flex);
+                        @include widthStyle(12.32rem, 2.24rem);
+                        @include borderStyle(1px, solid, var(--cl-fontColor));
+                        @include borderRadius(1.1733rem);
+
+                        button {
+                            @include widthStyle($height: 100%);
+                            @include borderRadius(1.12rem);
+                            @include fontStyle(0.7467rem, var(--cl-fontColor));
+                            border-width: 0;
+                            background-color: var(--cl-white);
+                            &:nth-child(1) {
+                                flex: 1;
+                            }
+                            &:nth-child(2) {
+                                @include widthStyle(7.84rem, 2.1333rem);
+                                background-color: var(--cl-fontColor);
+                                color: var(--cl-white);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .contentTitle {
+            @include spacingStyle(2.56rem 0 0 0);
+            @include widthStyle($height: 1.6rem);
+            @include fontStyle(0.3733rem, var(--cl-fontColor));
+            line-height: 1.6rem;
+            text-align: center;
+        }
+
+        .listContainer {
+            @include displayStyle(flex);
+            flex-wrap: wrap;
+            .listBox {
+                @include displayStyle(flex, center);
+                @include spacingStyle(0 0 0.5333rem);
+                @include widthStyle(50%, 14.4rem);
+                .listContent {
+                    overflow: hidden;
+                    @include widthStyle(8.5333rem, 100%);
+                    @include borderStyle(0.0267rem, solid, var(--cl-gray-100));
+                    .listImg {
+                        @include displayStyle(block);
+                        @include widthStyle(100%, 13.3333rem);
+                        img {
+                            @include widthStyle(100%, 100%);
+                        }
+                    }
+                    .listTitle {
+                        @include displayStyle(flex, space-between, center);
+                        @include widthStyle($height: 1.0667rem);
+                        @include fontStyle(0.64rem, var(--cl-gray-200));
+                        @include spacingStyle($padding: 0 0.4rem);
+                        span {
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        div {
+                            @include widthStyle(1.4933rem, 0.7467rem);
+                            @include borderRadius(0.16rem);
+                            background-color: var(--cl-fontColor);
+                            @include fontStyle($color: var(--cl-white));
+                            text-align: center;
+                            line-height: 0.7467rem;
+                            span {
+                                @include displayStyle(block);
+                                @include fontStyle(0.48rem);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* media start */
+@media screen and (min-width: 750px) {
+    html {
+        font-size: 37.5px !important;
+    }
+}
+/* media end*/

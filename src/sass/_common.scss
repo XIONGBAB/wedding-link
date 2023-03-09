@@ -1,0 +1,68 @@
+/* sass mixin variable fun start */
+@mixin displayStyle($display: null, $justifyContent: null, $alignItems: null) {
+    display: $display;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
+@mixin widthStyle($width: null, $height: null, $color: null) {
+    width: $width;
+    height: $height;
+    color: $color;
+}
+@mixin fontStyle($fontSize: null, $color: null, $fontWeight: null) {
+    font-size: $fontSize;
+    color: $color;
+    font-weight: $fontWeight;
+}
+@mixin positionStyle($position: null, $top: null, $left: null) {
+    position: $position;
+    top: $top;
+    left: $left;
+}
+@mixin borderStyle($size: null, $style: null, $color: null) {
+    border: $size $style $color;
+}
+@mixin borderRadius($top: null, $right: null, $bottom: null, $left: null) {
+    border-radius: $top $right $bottom $left;
+}
+@mixin imgStyle($address: null, $style: null, $width: null, $height: null) {
+    $url: url;
+    background: #{$url }($address) $style;
+    background-size: $width $height;
+}
+@mixin spacingStyle($margin: null, $padding: null) {
+    margin: $margin;
+    padding: $padding;
+}
+@mixin pseudoClass($width: null, $height: null) {
+    content: "";
+    display: block;
+    width: $width;
+    height: $height;
+}
+/* sass mixin variable fun ebd*/
+/* init css start*/
+:root {
+    --cl-fontColor: #ff8989;
+    --cl-bgColor: #fdf4f4;
+    --cl-white: white;
+    --cl-black: black;
+    --cl-gray: #f2efef;
+    --cl-gray-100: #e9e6e6;
+    --cl-gray-200: #afafaf;
+    --cl-gray-300: rgb(214, 214, 214);
+}
+html {
+    font-family: Arial, Microsoft YaHei, Heiti SC, tahoma, hiragino Sans GB, "\5B8B\4F53";
+    overflow-x: hidden;
+}
+a {
+    color: #666;
+    text-decoration: none;
+    -webkit-touch-callout: none;
+}
+a:hover {
+    color: #c81623; /* 鼠标经过链接变颜色 */
+}
+
+/* init css end*/

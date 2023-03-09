@@ -1,0 +1,256 @@
+@charset "UTF-8";
+/* sass mixin variable fun start */
+/* sass mixin variable fun ebd*/
+/* init css start*/
+:root {
+  --cl-fontColor: #ff8989;
+  --cl-bgColor: #fdf4f4;
+  --cl-white: white;
+  --cl-black: black;
+  --cl-gray: #f2efef;
+  --cl-gray-100: #e9e6e6;
+  --cl-gray-200: #afafaf;
+  --cl-gray-300: rgb(214, 214, 214);
+}
+
+html {
+  font-family: Arial, Microsoft YaHei, Heiti SC, tahoma, hiragino Sans GB, "宋体";
+  overflow-x: hidden;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+  -webkit-touch-callout: none;
+}
+
+a:hover {
+  color: #c81623;
+  /* 鼠标经过链接变颜色 */
+}
+
+/* init css end*/
+html body {
+  min-width: 320px;
+  max-width: 750px;
+  margin: 0 auto;
+}
+html body .header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transform: translateX(-50%);
+  width: 20rem;
+  height: 2.56rem;
+  font-size: 0.64rem;
+  color: var(--cl-fontColor);
+  border-bottom: 1px solid var(--cl-fontColor);
+  background-color: rgb(255, 255, 255);
+  z-index: 100;
+}
+html body .header .headerBack i {
+  font-size: 0.8533rem;
+}
+html body .header .headerSearch {
+  position: relative;
+}
+html body .header .headerSearch input {
+  width: 13.6rem;
+  height: 1.3333rem;
+  border: 1px solid var(--cl-fontColor);
+  border-radius: 0.8rem;
+  padding: 0 0 0 1.92rem;
+  color: var(--cl-gray-200);
+  outline: none;
+}
+html body .header .headerSearch input::placeholder {
+  color: var(--cl-gray-300);
+}
+html body .header .headerSearch i {
+  font-size: 0.6933rem;
+  position: absolute;
+  top: 50%;
+  left: 0.8533rem;
+  transform: translateY(-45%);
+}
+html body .header .headerScreening i {
+  font-size: 0.64rem;
+}
+html body .header .listFilter {
+  visibility: hidden;
+  position: absolute;
+  top: 2.56rem;
+  right: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 17.7067rem;
+  height: 40.7467rem;
+  border: 1px solid var(--cl-fontColor);
+  border-radius: 0.5333rem 0 0 0.5333rem;
+  background-color: var(--cl-white);
+}
+html body .header .listFilter .listFilterTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15.8933rem;
+  height: 2.1333rem;
+  border-bottom: 1px solid var(--cl-fontColor);
+}
+html body .header .listFilter .listFilterTop i {
+  flex: 1.12rem;
+  font-size: 1.12rem;
+}
+html body .header .listFilter .listFilterTop span {
+  flex: 1;
+  font-size: 0.7467rem;
+  transform: translateX(-1.12rem);
+}
+html body .header .listFilter .listFilterButton {
+  margin: 1.0667rem 0 0 0;
+  width: 100%;
+}
+html body .header .listFilter .listFilterButton .listButtonType, html body .header .listFilter .listFilterButton .listButtonAmount, html body .header .listFilter .listFilterButton .listButtonStyle {
+  font-size: 0.5867rem;
+  margin: 0 0 0.8rem;
+}
+html body .header .listFilter .listFilterButton .listButtonType .typeButton, html body .header .listFilter .listFilterButton .listButtonAmount .typeButton, html body .header .listFilter .listFilterButton .listButtonStyle .typeButton {
+  width: 3.7333rem;
+  height: 1.12rem;
+  border: 1px solid var(--cl-fontColor);
+  border-radius: 0 0.2667rem 0.2667rem 0;
+  font-size: 0.7467rem;
+  margin: 0 0 0.5333rem;
+  border-left: 1px solid transparent;
+  text-align: center;
+  line-height: 1.5em;
+}
+html body .header .listFilter .listFilterButton .listButtonType .typeAllButton, html body .header .listFilter .listFilterButton .listButtonAmount .typeAllButton, html body .header .listFilter .listFilterButton .listButtonStyle .typeAllButton {
+  display: flex;
+  margin: 0 0 0 1.12rem;
+  flex-wrap: wrap;
+}
+html body .header .listFilter .listFilterButton .listButtonType .typeAllButton button, html body .header .listFilter .listFilterButton .listButtonAmount .typeAllButton button, html body .header .listFilter .listFilterButton .listButtonStyle .typeAllButton button {
+  width: 3.2rem;
+  height: 1.4667rem;
+  color: var(--cl-fontColor);
+  border-radius: 0.2667rem;
+  border: 1px solid var(--cl-fontColor);
+  margin: 0 0.8rem 0.7rem 0;
+  background-color: var(--cl-white);
+}
+html body .header .listFilter .listFilterButton .listButtonType .typeAllButton .typeAllStyle, html body .header .listFilter .listFilterButton .listButtonAmount .typeAllButton .typeAllStyle, html body .header .listFilter .listFilterButton .listButtonStyle .typeAllButton .typeAllStyle {
+  background-color: var(--cl-fontColor);
+  color: var(--cl-white);
+}
+html body .header .listFilter .listFilterFooter {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+html body .header .listFilter .listFilterFooter .footerLogo {
+  width: 6.0267rem;
+  height: 3.5733rem;
+  background: url("../images/marryLogo.png") no-repeat;
+  background-size: 100%;
+  margin: 0 0 1rem;
+}
+html body .header .listFilter .listFilterFooter .footerButton {
+  display: flex;
+  width: 12.32rem;
+  height: 2.24rem;
+  border: 1px solid var(--cl-fontColor);
+  border-radius: 1.1733rem;
+}
+html body .header .listFilter .listFilterFooter .footerButton button {
+  height: 100%;
+  border-radius: 1.12rem;
+  font-size: 0.7467rem;
+  color: var(--cl-fontColor);
+  border-width: 0;
+  background-color: var(--cl-white);
+}
+html body .header .listFilter .listFilterFooter .footerButton button:nth-child(1) {
+  flex: 1;
+}
+html body .header .listFilter .listFilterFooter .footerButton button:nth-child(2) {
+  width: 7.84rem;
+  height: 2.1333rem;
+  background-color: var(--cl-fontColor);
+  color: var(--cl-white);
+}
+html body .contentTitle {
+  margin: 2.56rem 0 0 0;
+  height: 1.6rem;
+  font-size: 0.3733rem;
+  color: var(--cl-fontColor);
+  line-height: 1.6rem;
+  text-align: center;
+}
+html body .listContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+html body .listContainer .listBox {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 0.5333rem;
+  width: 50%;
+  height: 14.4rem;
+}
+html body .listContainer .listBox .listContent {
+  overflow: hidden;
+  width: 8.5333rem;
+  height: 100%;
+  border: 0.0267rem solid var(--cl-gray-100);
+}
+html body .listContainer .listBox .listContent .listImg {
+  display: block;
+  width: 100%;
+  height: 13.3333rem;
+}
+html body .listContainer .listBox .listContent .listImg img {
+  width: 100%;
+  height: 100%;
+}
+html body .listContainer .listBox .listContent .listTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1.0667rem;
+  font-size: 0.64rem;
+  color: var(--cl-gray-200);
+  padding: 0 0.4rem;
+}
+html body .listContainer .listBox .listContent .listTitle span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+html body .listContainer .listBox .listContent .listTitle div {
+  width: 1.4933rem;
+  height: 0.7467rem;
+  border-radius: 0.16rem;
+  background-color: var(--cl-fontColor);
+  color: var(--cl-white);
+  text-align: center;
+  line-height: 0.7467rem;
+}
+html body .listContainer .listBox .listContent .listTitle div span {
+  display: block;
+  font-size: 0.48rem;
+}
+
+/* media start */
+@media screen and (min-width: 750px) {
+  html {
+    font-size: 37.5px !important;
+  }
+}
+/* media end*/
+
+/*# sourceMappingURL=wdpage.css.map */
