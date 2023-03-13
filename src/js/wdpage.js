@@ -14,4 +14,6 @@ btns.addEventListener("click", () => {
         lists.style.visibility = "initial";
     }
     console.log(1);
+    console.log(2);
+    console.log(3);
 });
